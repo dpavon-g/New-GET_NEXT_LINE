@@ -1,6 +1,7 @@
 #include "libft/libft.h"
 
 #include <fcntl.h>
+
 /*
 
     Este programa usa funciones de mi libft, para que funcione sin ellas simplemente,
@@ -9,7 +10,7 @@
     la flag "-D BUFFER_SIZE=X".
 
 */
-BUFFER_SIZE = 2;
+
 void separate(char **str, char **line)
 {
     char *aux;
@@ -43,9 +44,7 @@ char *get_next_line(int fd)
     char        buff[BUFFER_SIZE + 1];
     char        *aux;
     char        *line;
-    int         i;
 
-    i = 0;
     value = read(fd, buff, BUFFER_SIZE);
     if (value < 0)
         return (NULL);
